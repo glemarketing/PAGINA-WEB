@@ -71,7 +71,7 @@ export default function Hero() {
               className="absolute inset-0 w-full h-full z-0 flex items-center justify-center bg-black/40"
             >
               <img 
-                src="/PAGINA-WEB/catalogo.png"
+                src="/PAGINA-WEB/catalogo.webp"
                 className="w-full h-full object-contain p-2"
                 alt="Catálogo de Productos - Manejo de Redes"
               />

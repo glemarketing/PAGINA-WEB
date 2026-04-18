@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 
 const images = [
-  { src: "/portfolio/media__1775247707032.jpg", title: 'Logo 1' },
-  { src: "/portfolio/media__1775247706759.png", title: 'Logo 2' },
-  { src: "/portfolio/media__1775247706561.png", title: 'Logo 3' },
-  { src: "/portfolio/media__1775247706479.jpg", title: 'Logo 4' },
-  { src: "/portfolio/media__1775247705827.png", title: 'Logo 5' }
+  { src: "/portfolio/media__1775247707032.webp", title: 'Logo 1' },
+  { src: "/portfolio/media__1775247706759.webp", title: 'Logo 2' },
+  { src: "/portfolio/media__1775247706561.webp", title: 'Logo 3' },
+  { src: "/portfolio/media__1775247706479.webp", title: 'Logo 4' },
+  { src: "/portfolio/media__1775247705827.webp", title: 'Logo 5' }
 ];
 
 export default function BrandSlider() {
