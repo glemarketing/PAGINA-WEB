@@ -7,7 +7,7 @@ const services = [
     desc: 'Estrategias de visibilidad masiva enfocada en tu identidad.',
     icon: <Smartphone className="w-6 h-6 text-black" />,
     className: "col-span-1 md:col-span-2 row-span-2 bg-[#0a0a0a] hover:bg-[#111]",
-    image: "/gestion_redes.png", // Render 3D personalizado
+    image: "/PAGINA-WEB/gestion_redes.png", // Render 3D personalizado
   },
   {
     title: 'Branding',
@@ -127,3 +127,7 @@ export default function Services() {
     </section>
   );
 }
+
+
+
+

@@ -68,11 +68,11 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0 w-full h-full z-0"
+              className="absolute inset-0 w-full h-full z-0 flex items-center justify-center bg-black/40"
             >
               <img 
-                src="/catalogo.png"
-                className="w-full h-full object-cover"
+                src="/PAGINA-WEB/catalogo.png"
+                className="w-full h-full object-contain p-2"
                 alt="Catálogo de Productos - Manejo de Redes"
               />
             </motion.div>
@@ -86,3 +86,7 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
+

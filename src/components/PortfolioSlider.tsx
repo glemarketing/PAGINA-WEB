@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
 
 const images = [
-  { src: '/portfolio/media__1775246265863.jpg', category: 'Social Media', title: 'Golf Kids' },
-  { src: '/portfolio/media__1775246211937.png', category: 'Branding', title: 'Costas Garden' },
-  { src: '/portfolio/media__1775246211970.png', category: 'Diseño Gráfico', title: 'Dubai Restaurant' },
-  { src: '/portfolio/media__1775246211999.png', category: 'Feed Management', title: 'Costas Garden App' },
-  { src: '/portfolio/media__1775246212033.png', category: 'Content Creation', title: 'Promoción Dubai' },
-  { src: '/portfolio/media__1775246212047.jpg', category: 'Campaigns', title: 'UTravel' },
-  { src: '/portfolio/media__1775246232572.png', category: 'Estrategia Digital', title: 'Feed Profesional' },
-  { src: '/portfolio/media__1775246264576.png', category: 'Producción Audiovisual', title: 'Ingeca' },
-  { src: '/portfolio/media__1775246265594.jpg', category: 'Meta Ads', title: 'UTravel Destinos' },
-  { src: '/portfolio/media__1775246283694.png', category: 'Shows & Eventos', title: 'Barry Mendieta' }
+  { src: "/portfolio/media__1775246265863.jpg", category: 'Social Media', title: 'Golf Kids' },
+  { src: "/portfolio/media__1775246211937.png", category: 'Branding', title: 'Costas Garden' },
+  { src: "/portfolio/media__1775246211970.png", category: 'Diseño Gráfico', title: 'Dubai Restaurant' },
+  { src: "/portfolio/media__1775246211999.png", category: 'Feed Management', title: 'Costas Garden App' },
+  { src: "/portfolio/media__1775246212033.png", category: 'Content Creation', title: 'Promoción Dubai' },
+  { src: "/portfolio/media__1775246212047.jpg", category: 'Campaigns', title: 'UTravel' },
+  { src: "/portfolio/media__1775246232572.png", category: 'Estrategia Digital', title: 'Feed Profesional' },
+  { src: "/portfolio/media__1775246264576.png", category: 'Producción Audiovisual', title: 'Ingeca' },
+  { src: "/portfolio/media__1775246265594.jpg", category: 'Meta Ads', title: 'UTravel Destinos' },
+  { src: "/portfolio/media__1775246283694.png", category: 'Shows & Eventos', title: 'Barry Mendieta' }
 ];
 
 export default function PortfolioSlider() {
@@ -176,3 +176,7 @@ const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
+
+
+
+
