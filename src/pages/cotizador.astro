@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import CartBuilder from '../components/CartBuilder.tsx';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Arma tu Plan - GLE Marketing" description="Selecciona los servicios de marketing digital y desarrollo web que necesitas.">
+	<Navbar />
+	<main class="pt-20">
+		<CartBuilder client:load />
+	</main>
+	<Footer />
+</Layout>
