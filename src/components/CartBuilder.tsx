@@ -55,7 +55,7 @@ export default function CartBuilder() {
   // pero el layout principal siempre estará presente.
   
   return (
-    <div className="w-full min-h-screen bg-brand-bg relative pb-20 pt-8 lg:pt-16 px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen bg-brand-bg relative pb-32 lg:pb-20 pt-8 lg:pt-16 px-4 sm:px-6 lg:px-8">
       {/* Glow en el fondo general */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-green/10 rounded-full blur-[150px] pointer-events-none opacity-50 z-0 hidden lg:block"></div>
 
@@ -208,6 +208,32 @@ export default function CartBuilder() {
 
         </div>
       </div>
+
+      {/* MOBILE STICKY BOTTOM CHECKOUT BAR */}
+      <div className="fixed bottom-0 left-0 w-full bg-[#030712]/95 backdrop-blur-2xl border-t border-white/10 p-5 lg:hidden z-50 flex items-center justify-between pb-safe shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+        <div className="flex flex-col">
+          <span className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-0.5">Total Estimado</span>
+          <span className="text-2xl font-black text-white flex items-center gap-1">
+            <span className="text-brand-green">L.</span>{mounted ? totalPrice.toLocaleString() : '0'}
+          </span>
+        </div>
+        <button
+          onClick={handleCheckout}
+          disabled={!mounted || selectedIds.length === 0}
+          className={`px-6 py-3.5 rounded-xl font-bold text-[13px] transition-all flex items-center gap-2
+            ${(!mounted || selectedIds.length === 0)
+              ? 'bg-white/5 text-gray-500 border border-white/10 cursor-not-allowed' 
+              : 'bg-brand-green text-[#030712] hover:bg-white border border-brand-green active:scale-95 shadow-[0_0_20px_rgba(34,197,94,0.3)]'
+            }
+          `}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+          </svg>
+          WhatsApp
+        </button>
+      </div>
+
     </div>
   );
 }
