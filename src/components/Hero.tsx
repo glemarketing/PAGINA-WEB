@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#030712]">
+    <section id="inicio" className="relative min-h-[100svh] flex items-center pt-24 md:pt-20 pb-12 md:pb-0 overflow-hidden bg-[#030712]">
       {/* Background glow and subtle elements */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-[800px] h-[800px] bg-brand-green/10 rounded-full blur-[150px] z-10 transition-opacity duration-1000"></div>
@@ -23,7 +23,7 @@ export default function Hero() {
                 Especialistas en Catálogos
               </div>
               
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-4 md:mb-6 leading-[1.15] md:leading-[1.1]">
                 Tu producto, en el <br />
                 <span className="text-brand-green italic mr-2 text-glow">centro</span>
                 de todo.
@@ -34,7 +34,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-gray-400 text-lg md:text-xl mb-10 max-w-xl leading-relaxed"
+              className="text-gray-400 text-base sm:text-lg md:text-xl mb-8 md:mb-10 max-w-xl leading-relaxed"
             >
               Servicio experto de manejo de redes sociales enfocado en el diseño, fotografía y exposición de catálogos de producto. Hacemos que tu inventario destaque y convierta seguidores en compradores.
             </motion.p>
@@ -43,12 +43,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row gap-3 md:gap-4 w-full sm:w-auto"
             >
-              <a href="#contacto" className="bg-brand-green text-brand-bg hover:bg-brand-green-hover px-8 py-4 rounded-sm font-bold text-sm transition-all duration-300 hover:box-glow">
+              <a href="#contacto" className="bg-brand-green text-brand-bg hover:bg-brand-green-hover px-6 py-3.5 md:px-8 md:py-4 rounded-sm font-bold text-[13px] md:text-sm text-center transition-all duration-300 hover:box-glow w-full sm:w-auto">
                 Inicia tu Proyecto
               </a>
-              <a href="#portafolio" className="border border-white/20 hover:border-white/50 text-white bg-white/5 backdrop-blur-sm px-8 py-4 rounded-sm font-bold text-sm transition-all duration-300">
+              <a href="#portafolio" className="border border-white/20 hover:border-white/50 text-white bg-white/5 backdrop-blur-sm px-6 py-3.5 md:px-8 md:py-4 rounded-sm font-bold text-[13px] md:text-sm text-center transition-all duration-300 w-full sm:w-auto">
                 Ver Portafolio
               </a>
             </motion.div>
@@ -59,7 +59,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] border border-white/10 group mt-10 md:mt-0"
+            className="relative w-full h-[280px] sm:h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] border border-white/10 group mt-8 md:mt-0"
           >
             {/* Green gradient overlay for brand identity */}
             <div className="absolute inset-0 bg-brand-green/10 mix-blend-overlay z-10 group-hover:bg-brand-green/5 transition-colors duration-500 pointer-events-none"></div>

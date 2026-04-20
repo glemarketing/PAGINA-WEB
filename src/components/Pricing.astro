@@ -57,6 +57,16 @@ const plans = [
   }
 ];
 ---
+<style>
+  /* Ocultar barra de scroll para carrusel horizontal */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  .no-scrollbar {
+      -ms-overflow-style: none; 
+      scrollbar-width: none; 
+  }
+</style>
 
 <section id="precios" class="py-24 bg-brand-bg relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -65,12 +75,12 @@ const plans = [
       <p class="text-gray-400">Modelos de crecimiento adaptados a la etapa de tu empresa</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+    <div class="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-5 md:gap-8 pb-8 md:pb-0 -mx-4 px-4 md:mx-auto md:px-0 items-stretch max-w-5xl no-scrollbar">
       {plans.map(plan => (
-        <div class={`group rounded-2xl p-8 border hover:scale-105 transition-all duration-500 flex flex-col ${plan.highlighted ? 'bg-white text-[#030712] border-white scale-105 z-10 shadow-[0_0_50px_rgba(255,255,255,0.1)] relative hover:scale-[1.08]' : 'bg-brand-card border-white/10 text-white hover:border-brand-green/50'}`}>
+        <div class={`w-[85vw] sm:w-[340px] md:w-auto flex-shrink-0 snap-center group rounded-2xl p-6 md:p-8 border hover:scale-105 transition-all duration-500 flex flex-col ${plan.highlighted ? 'bg-white text-[#030712] border-white md:scale-105 z-10 shadow-[0_0_50px_rgba(255,255,255,0.1)] relative md:hover:scale-[1.08]' : 'bg-brand-card border-white/10 text-white hover:border-brand-green/50'}`}>
           
           <!-- Image with Hover Blur Effect -->
-          <div class="h-48 w-full mb-6 overflow-hidden rounded-xl relative -mt-2">
+          <div class="h-32 md:h-48 w-full mb-5 md:mb-6 overflow-hidden rounded-xl relative -mt-2">
             <img 
               src={plan.image} 
               alt={plan.subtitle} 
@@ -86,18 +96,18 @@ const plans = [
           )}
 
           <h3 class={`text-sm tracking-wider font-bold mb-2 uppercase ${plan.highlighted ? 'text-gray-500' : 'text-brand-green'}`}>{plan.name}</h3>
-          <div class="flex flex-col mb-8 border-b pb-6 border-white/10">
+          <div class="flex flex-col mb-6 md:mb-8 border-b pb-5 md:pb-6 border-white/10">
             <div class="flex items-end gap-1">
-              <span class={`text-4xl font-black tracking-tight ${plan.highlighted ? 'text-black' : 'text-white'}`}>{plan.subtitle}</span>
+              <span class={`text-3xl md:text-4xl font-black tracking-tight ${plan.highlighted ? 'text-black' : 'text-white'}`}>{plan.subtitle}</span>
             </div>
-            {plan.priceDesc && <span class={`text-xs mt-1 font-medium ${plan.highlighted ? 'text-gray-500' : 'text-gray-400'}`}>{plan.priceDesc}</span>}
+            {plan.priceDesc && <span class={`text-[11px] md:text-xs mt-1 font-medium ${plan.highlighted ? 'text-gray-500' : 'text-gray-400'}`}>{plan.priceDesc}</span>}
           </div>
 
           <ul class="space-y-4 mb-8">
             {plan.features.map(feature => (
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-brand-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                <span class={`text-sm ${plan.highlighted ? 'text-gray-800 font-semibold' : 'text-gray-300'}`}>{feature}</span>
+                <span class={`text-[13px] md:text-sm ${plan.highlighted ? 'text-gray-800 font-semibold' : 'text-gray-300'}`}>{feature}</span>
               </li>
             ))}
           </ul>
