@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Home, Search, BarChart2, User, Send, Download, Plus, ArrowRight, MapPin, Package, MessageSquare } from 'lucide-react';
 
 export default function MobileAppUI() {
-  const baseUrl = typeof window !== 'undefined' ? import.meta.env.BASE_URL : '/';
+  const baseUrl = import.meta.env.BASE_URL;
 
   return (
     <div className="bg-[#030712] w-full relative font-sans text-white overflow-x-hidden">
