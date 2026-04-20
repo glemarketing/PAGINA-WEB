@@ -1,10 +1,10 @@
 ---
 const navLinks = [
-  { text: 'Inicio', href: "/#inicio" },
-  { text: 'Servicios', href: "/#servicios" },
-  { text: 'Portafolio', href: "/#portafolio" },
-  { text: 'Precios', href: "/#precios" },
-  { text: 'Contacto', href: "/#contacto" },
+  { text: 'Inicio', href: import.meta.env.BASE_URL + "#inicio" },
+  { text: 'Servicios', href: import.meta.env.BASE_URL + "#servicios" },
+  { text: 'Portafolio', href: import.meta.env.BASE_URL + "#portafolio" },
+  { text: 'Precios', href: import.meta.env.BASE_URL + "#precios" },
+  { text: 'Contacto', href: import.meta.env.BASE_URL + "#contacto" },
 ];
 ---
 
@@ -19,9 +19,9 @@ const navLinks = [
       
       <!-- Logo -->
       <div class="flex-shrink-0 flex items-center">
-        <a href="/PAGINA-WEB/#inicio" class="flex gap-2 items-center group">
+        <a href={import.meta.env.BASE_URL + "#inicio"} class="flex gap-2 items-center group">
           <img 
-            src="/PAGINA-WEB/logo-gle-light-trans.webp" 
+            src={import.meta.env.BASE_URL + "logo-gle-light-trans.webp"} 
             alt="GLE Marketing" 
             class="h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-[0_0_15px_rgba(34,197,94,0.6)]" 
           />
@@ -43,7 +43,7 @@ const navLinks = [
       <!-- CTA Button -->
       <div class="hidden md:flex items-center gap-4">
         <a 
-          href="/PAGINA-WEB/cotizador" 
+          href={import.meta.env.BASE_URL + "cotizador"} 
           class="text-gray-300 hover:text-brand-green transition-transform duration-300 hover:-translate-y-1 hover:scale-110 relative"
           aria-label="Arma tu Plan"
           title="Arma tu Plan"
@@ -55,7 +55,7 @@ const navLinks = [
           </svg>
         </a>
         <a
-          href="/PAGINA-WEB/#contacto"
+          href={import.meta.env.BASE_URL + "#contacto"}
           class="bg-brand-green text-brand-bg hover:bg-brand-green-hover px-6 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,197,94,0.4)] hover:scale-105"
         >
           Empezar
