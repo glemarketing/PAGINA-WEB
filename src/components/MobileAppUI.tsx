@@ -10,7 +10,7 @@ export default function MobileAppUI() {
       {/* 1. HERO SECTION */}
       <section className="relative w-full rounded-b-[30px] sm:rounded-b-[40px] overflow-hidden shadow-2xl pt-12 sm:pt-16 pb-12 px-5 sm:px-6">
         <img 
-          src={`${baseUrl}catalogo.webp`} 
+          src={`${baseUrl}mobile_hero_bg.png`} 
           alt="Hero Background" 
           className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
         />
