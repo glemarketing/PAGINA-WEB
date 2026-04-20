@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://glemarketing.github.io',
-  base: process.env.npm_lifecycle_event === 'build' ? '/PAGINA-WEB' : '',
+  base: process.env.npm_lifecycle_event === 'build' ? '/PAGINA-WEB/' : '/',
   vite: {
     plugins: [tailwindcss()]
   },
