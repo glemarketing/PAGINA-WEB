@@ -4,7 +4,7 @@ const plans = [
     name: 'Plan 1 Mensual',
     subtitle: 'L. 4,000',
     priceDesc: '/mes (No incluye inversión Ads)',
-    image: import.meta.env.BASE_URL + "pricing_app_1.webp",
+    image: `${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/pricing_app_1.webp`,
     features: [
       '2 posts por semana (8 al mes)',
       '3 historias por semana',
@@ -22,7 +22,7 @@ const plans = [
     name: 'Plan 2 Mensual',
     subtitle: 'L. 7,000',
     priceDesc: '/mes',
-    image: import.meta.env.BASE_URL + "pricing_app_2.webp",
+    image: `${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/pricing_app_2.webp`,
     features: [
       '3 posts por semana (12 al mes)',
       'Historias de lunes a viernes',
@@ -41,7 +41,7 @@ const plans = [
     name: 'Plan 3 Mensual',
     subtitle: 'L. 12,000',
     priceDesc: '/mes',
-    image: import.meta.env.BASE_URL + "pricing_app_3.webp",
+    image: `${import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL}/pricing_app_3.webp`,
     features: [
       '5 posts por semana (20 al mes)',
       'Historias diarias estratégicas',
@@ -102,7 +102,7 @@ const plans = [
             ))}
           </ul>
 
-          <a href="#contacto" onclick={`window.dispatchEvent(new CustomEvent('plan-selected', { detail: { plan: '${plan.name}' } }))`} class={`block w-full text-center py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 ${plan.highlighted ? 'bg-[#030712] text-white hover:bg-brand-green hover:text-black shadow-xl hover:shadow-2xl' : 'border border-white/20 hover:border-brand-green hover:text-brand-green text-white'}`}>
+          <a href="#contacto" onclick={`window.dispatchEvent(new CustomEvent('plan-selected', { detail: { plan: '${plan.name}' } }))`} class={`block w-full text-center py-4 px-6 rounded-xl font-bold text-sm tracking-wide transition-all duration-300 transform ${plan.highlighted ? 'bg-[#030712] text-white hover:bg-brand-green hover:text-black shadow-xl hover:shadow-2xl hover:-translate-y-1' : 'border-2 border-white/20 hover:border-brand-green hover:bg-brand-green/10 hover:text-brand-green text-white hover:-translate-y-1'}`}>
             {plan.btnText}
           </a>
         </div>
