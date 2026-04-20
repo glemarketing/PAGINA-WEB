@@ -8,19 +8,19 @@ export default function MobileAppUI() {
     <div className="bg-[#030712] w-full relative font-sans text-white overflow-x-hidden">
       
       {/* 1. HERO SECTION */}
-      <section className="relative h-[55vh] w-full rounded-b-[40px] overflow-hidden shadow-2xl">
+      <section className="relative w-full rounded-b-[30px] sm:rounded-b-[40px] overflow-hidden shadow-2xl pt-12 sm:pt-16 pb-12 px-5 sm:px-6">
         <img 
           src={`${baseUrl}catalogo.webp`} 
           alt="Hero Background" 
           className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent" />
         
-        <div className="absolute bottom-10 left-6 right-6">
+        <div className="relative z-10 mt-4 sm:mt-6">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-extrabold leading-[1.15] tracking-tight mb-3"
+            className="text-3xl sm:text-4xl font-extrabold leading-[1.15] tracking-tight mb-2 sm:mb-3"
           >
             Tu producto, en el <br />
             <span className="text-brand-green italic">centro</span> de todo.
@@ -29,7 +29,7 @@ export default function MobileAppUI() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/80 text-[14px] mb-6 leading-relaxed max-w-[90%]"
+            className="text-white/80 text-[13px] sm:text-[14px] mb-5 sm:mb-6 leading-relaxed max-w-[95%]"
           >
             Manejo de redes sociales enfocado en diseño, fotografía y exposición de catálogos.
           </motion.p>
@@ -38,7 +38,7 @@ export default function MobileAppUI() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex bg-brand-green text-brand-bg px-8 py-3.5 rounded-full font-bold text-sm items-center gap-2 shadow-[0_0_20px_rgba(91,248,96,0.3)] hover:scale-105 active:scale-95 transition-all"
+            className="inline-flex bg-brand-green text-brand-bg px-6 sm:px-8 py-3.5 rounded-full font-bold text-sm items-center gap-2 shadow-[0_0_20px_rgba(91,248,96,0.3)] hover:scale-105 active:scale-95 transition-all text-center"
           >
             Inicia tu Proyecto <ArrowRight className="w-4 h-4" />
           </motion.a>
