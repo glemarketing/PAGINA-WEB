@@ -11,23 +11,34 @@ import Ads from '../components/Ads.astro';
 import Brands from '../components/Brands.astro';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer.astro';
+import MobileAppUI from '../components/MobileAppUI';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="GLE Marketing - Agencia Digital Exponencial" description="Crecemos tu marca online. Diseño web, branding, gestión de redes y ads.">
-	<Navbar />
-	<main>
-		<Hero client:load />
-		<About />
-		<Services client:load />
-		<Portfolio />
-		<Brands />
-		<Pricing />
-		<Methodology />
-		<Ads />
-		<Contact client:load />
-	</main>
-	<Footer />
+	
+	<!-- VISTA CLASICA (DESKTOP) -->
+	<div class="hidden md:block">
+		<Navbar />
+		<main>
+			<Hero client:load />
+			<About />
+			<Services client:load />
+			<Portfolio />
+			<Brands />
+			<Pricing />
+			<Methodology />
+			<Ads />
+			<Contact client:load />
+		</main>
+		<Footer />
+	</div>
+
+	<!-- VISTA DASHBOARD FINANCIERO (MOBILE ONLY) -->
+	<div class="block md:hidden">
+		<MobileAppUI client:load />
+	</div>
+
 </Layout>
