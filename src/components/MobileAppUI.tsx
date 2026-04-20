@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Home, Search, BarChart2, User, Send, Download, Plus, ArrowRight, MapPin } from 'lucide-react';
+import { Home, Search, BarChart2, User, Send, Download, Plus, ArrowRight, MapPin, Package, MessageSquare } from 'lucide-react';
 
 export default function MobileAppUI() {
   const baseUrl = typeof window !== 'undefined' ? import.meta.env.BASE_URL : '/';
@@ -95,12 +95,11 @@ export default function MobileAppUI() {
 
       {/* 5. BOTTOM NAVIGATION */}
       <nav className="fixed bottom-0 w-full bg-[#030712]/90 backdrop-blur-2xl border-t border-white/5 pb-safe pt-3 pb-5 px-6 z-50">
-        <div className="flex justify-between items-center max-w-sm mx-auto">
+        <div className="flex justify-around items-center w-full px-4">
           {[
             { icon: Home, link: '#inicio', active: true },
-            { icon: BarChart2, link: '#servicios', active: false },
-            { icon: Search, link: '#portafolio', active: false },
-            { icon: User, link: '#contacto', active: false },
+            { icon: Package, link: '#precios', active: false },
+            { icon: MessageSquare, link: '#contacto', active: false },
           ].map((item, i) => (
             <a href={item.link} key={i} className="flex flex-col items-center justify-center p-2 cursor-pointer group decoration-transparent">
               <div className={`relative flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 ${item.active ? 'bg-brand-green/10 text-brand-green' : 'text-white/40 group-hover:text-white/80'}`}>
