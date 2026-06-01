@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Smartphone, PenTool, MessageSquare, Monitor, LayoutDashboard } from 'lucide-react';
+import { Smartphone, PenTool, MessageSquare, Monitor, LayoutDashboard, Sparkles } from 'lucide-react';
 
 const services = [
   {
@@ -36,10 +36,24 @@ const services = [
     icon: <LayoutDashboard className="w-6 h-6 text-brand-bg block ml-auto" />,
     className: "col-span-1 md:col-span-4 bg-white text-black flex items-end justify-between relative overflow-hidden group",
     image: "", // Custom CSS visual later
+  },
+  {
+    title: 'Experiencia Digital',
+    desc: 'Diseña tu presencia online. Selecciona las herramientas que deseas potenciar y crea un ecosistema digital de alta gama.',
+    icon: <Sparkles className="w-6 h-6 text-brand-green" />,
+    className: "col-span-1 md:col-span-4 bg-gradient-to-r from-black via-[#040e06] to-[#010602] text-white flex items-end justify-between relative overflow-hidden group border border-brand-green/20 hover:border-brand-green/40 hover:shadow-[0_10px_40px_rgba(91,248,96,0.1)] cursor-pointer",
+    image: "",
   }
 ];
 
 export default function Services() {
+  const handleScrollToExperience = () => {
+    const el = document.getElementById('experiencia-digital');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="servicios" className="py-32 bg-brand-bg relative overflow-hidden">
       {/* Glow ambientales blancos y verdes */}
@@ -70,6 +84,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
+              onClick={service.title === 'Experiencia Digital' ? handleScrollToExperience : undefined}
               className={`rounded-3xl p-8 relative border border-white/10 transition-all duration-500 overflow-hidden group hover:-translate-y-1 hover:border-white/30 hover:shadow-[0_10px_40px_rgba(255,255,255,0.05)] ${service.className}`}
             >
               {/* Image Background Layer with White/Dark Overlays */}
@@ -88,9 +103,15 @@ export default function Services() {
               )}
 
               {/* Specific White Accent details line */}
-              <div className="absolute top-0 left-6 w-12 h-1 bg-white/20 group-hover:bg-white/60 transition-colors duration-300 rounded-b-full z-20"></div>
+              {service.title !== 'Experiencia Digital' && (
+                <div className="absolute top-0 left-6 w-12 h-1 bg-white/20 group-hover:bg-white/60 transition-colors duration-300 rounded-b-full z-20"></div>
+              )}
+              
+              {service.title === 'Experiencia Digital' && (
+                <div className="absolute top-0 left-6 w-12 h-1 bg-brand-green/20 group-hover:bg-brand-green/60 transition-colors duration-300 rounded-b-full z-20"></div>
+              )}
 
-              <div className="relative z-10 flex flex-col h-full justify-between">
+              <div className="relative z-10 flex flex-col h-full justify-between w-full">
                 {service.title === 'Google & Meta Ads' ? (
                   <>
                     <div className="absolute -right-20 -top-20 w-64 h-64 bg-brand-green/20 blur-[50px] rounded-full group-hover:bg-brand-green/40 transition-colors duration-500"></div>
@@ -104,6 +125,22 @@ export default function Services() {
                       </div>
                       <div className="hidden md:flex mt-4 md:mt-0 items-center justify-center bg-black text-white px-6 py-3 rounded-full font-bold hover:bg-brand-green hover:text-black transition-colors cursor-pointer border border-black/20">
                         Descubrir <span className="ml-2">→</span>
+                      </div>
+                    </div>
+                  </>
+                ) : service.title === 'Experiencia Digital' ? (
+                  <>
+                    <div className="absolute -right-20 -top-20 w-64 h-64 bg-brand-green/10 blur-[60px] rounded-full group-hover:bg-brand-green/30 transition-colors duration-500"></div>
+                    <div className="relative z-10 w-full flex flex-col md:flex-row items-start md:items-end justify-between h-full">
+                      <div className="max-w-xl">
+                        <div className="mb-4 bg-brand-green/10 backdrop-blur-md p-4 rounded-xl w-fit group-hover:scale-110 transition-all border border-brand-green/20">
+                          <Sparkles className="w-8 h-8 text-brand-green" />
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2 tracking-tight">Experiencia Digital</h3>
+                        <p className="text-gray-400 font-medium text-base md:text-lg leading-snug">{service.desc}</p>
+                      </div>
+                      <div className="hidden md:flex mt-4 md:mt-0 items-center justify-center bg-brand-green text-black px-6 py-3 rounded-full font-bold hover:bg-brand-green-hover transition-colors cursor-pointer border border-brand-green/20 shadow-[0_0_15px_rgba(91,248,96,0.2)] whitespace-nowrap">
+                        Construye tu Presencia <span className="ml-2">→</span>
                       </div>
                     </div>
                   </>
@@ -127,6 +164,7 @@ export default function Services() {
     </section>
   );
 }
+
 
 
 

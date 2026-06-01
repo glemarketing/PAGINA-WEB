@@ -24,9 +24,9 @@ export default function Hero() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-4 md:mb-6 leading-[1.15] md:leading-[1.1]">
-                Tu producto, en el <br />
-                <span className="text-brand-green italic mr-2 text-glow">centro</span>
-                de todo.
+                Tu catálogo, <br />
+                <span className="text-brand-green italic mr-2 text-glow">actualizado</span>
+                al instante.
               </h1>
             </motion.div>
 
