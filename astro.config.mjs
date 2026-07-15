@@ -9,10 +9,7 @@ export default defineConfig({
   site: 'https://glemarketing.github.io',
   base: process.env.npm_lifecycle_event === 'build' ? '/PAGINA-WEB/' : '/',
   vite: {
-    plugins: [tailwindcss()],
-    ssr: {
-      noExternal: ['lucide-react']
-    }
+    plugins: [tailwindcss()]
   },
 
   integrations: [react()]

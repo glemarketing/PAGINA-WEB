@@ -1,29 +1,27 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import pkg from 'lucide-react';
-
-const {
-  Instagram,
-  Facebook,
-  Sparkles,
-  Globe,
-  FileText,
-  Layers,
-  Activity,
-  Search,
-  ShoppingCart,
-  ArrowUpRight,
-  TrendingUp,
-  Users,
-  Eye,
-  Heart,
-  MessageSquare,
+import { 
+  Instagram, 
+  Facebook, 
+  Sparkles, 
+  Globe, 
+  FileText, 
+  Layers, 
+  Activity, 
+  Search, 
+  ShoppingCart, 
+  ArrowUpRight, 
+  TrendingUp, 
+  Users, 
+  Eye, 
+  Heart, 
+  MessageSquare, 
   Send,
   Zap,
   CheckCircle,
   Smartphone,
   Laptop
-} = pkg;
+} from 'lucide-react';
 
 // Custom icons for platforms
 const TikTokIcon = ({ className = "w-5 h-5" }: { className?: string }) => (

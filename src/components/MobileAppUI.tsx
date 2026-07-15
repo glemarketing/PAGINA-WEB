@@ -22,8 +22,8 @@ export default function MobileAppUI() {
             animate={{ opacity: 1, y: 0 }}
             className="text-3xl sm:text-4xl font-extrabold leading-[1.15] tracking-tight mb-2 sm:mb-3"
           >
-            Tu catálogo, <br />
-            <span className="text-brand-green italic">actualizado</span> al instante.
+            Tu catálogo <br />
+            <span className="text-brand-green italic">actualizado</span> al instante
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
