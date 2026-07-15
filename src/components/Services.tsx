@@ -95,6 +95,8 @@ export default function Services() {
                       src={service.image} 
                       alt="" 
                       className="w-full h-full object-cover opacity-20 mix-blend-luminosity group-hover:opacity-40 transition-opacity duration-700 ease-in-out group-hover:scale-105 transform"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Home, Search, BarChart2, User, Send, Download, Plus, ArrowRight, MapPin, Package, MessageSquare } from 'lucide-react';
+import { Home, BarChart2, User, Plus, ArrowRight, Package, MessageSquare } from 'lucide-react';
 
 export default function MobileAppUI() {
   const baseUrl = import.meta.env.BASE_URL;

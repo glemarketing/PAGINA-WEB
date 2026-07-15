@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const images = [
   { src: `${import.meta.env.BASE_URL}portfolio/media__1775247707032.webp`, title: 'Logo 1' },
@@ -23,7 +23,7 @@ export default function BrandSlider() {
     }, 4500);
     
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlaying]);
+  }, [currentIndex, isAutoPlaying, handleNext]);
 
   const handleNext = useCallback(() => {
     setDirection(1);

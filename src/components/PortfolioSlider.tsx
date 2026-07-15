@@ -29,7 +29,7 @@ export default function PortfolioSlider() {
     }, 4500); // 4.5 seconds per slide
     
     return () => clearInterval(interval);
-  }, [currentIndex, isAutoPlaying]);
+  }, [currentIndex, isAutoPlaying, handleNext]);
 
   const handleNext = useCallback(() => {
     setDirection(1);

@@ -61,19 +61,19 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative w-full h-[280px] sm:h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] border border-white/10 group mt-8 md:mt-0"
           >
-            {/* Green gradient overlay for brand identity */}
-            <div className="absolute inset-0 bg-brand-green/10 mix-blend-overlay z-10 group-hover:bg-brand-green/5 transition-colors duration-500 pointer-events-none"></div>
             {/* Static Catalog Image */}
             <motion.div
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="absolute inset-0 w-full h-full z-0 flex items-center justify-center bg-black/40"
+              className="absolute inset-0 w-full h-full z-0 flex items-center justify-center bg-transparent"
             >
               <img 
-                src={`${import.meta.env.BASE_URL}catalogo.webp`}
+                src={`${import.meta.env.BASE_URL}hero-banner.jpg`}
                 className="w-full h-full object-contain p-2"
-                alt="Catálogo de Productos - Manejo de Redes"
+                alt="Diseño Profesional para Impulsar tu Negocio - GLE Marketing"
+                fetchPriority="high"
+                decoding="async"
               />
             </motion.div>
             
